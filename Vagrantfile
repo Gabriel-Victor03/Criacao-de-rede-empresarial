@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "vm4" do |vm4|
     vm4.vm.box = "ubuntu/focal64"
-    vm4.vm.hostname = "ftp"
+    vm4.vm.hostname = "servidor-ftp"
     vm4.vm.network "private_network", type: "dhcp"
     vm4.vm.provider "virtualbox" do |vb|
       vb.memory = "512"
@@ -35,4 +35,18 @@ Vagrant.configure("2") do |config|
     end
     vm4.vm.provision "shell", path: "shell/vm4.sh"
   end
+
+
+  config.vm.defin "vm5" do |vm5|
+    vm5.vm.box = "ubuntu/focal64"
+    vm5.vm.hostname = "servidor-nfs"
+    vm5.vm.network "private_network", type: "dhcp"
+    vm5.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+      vb.cpus = "1"
+    end
+    vm5.vm.provision "shell", path:"shell/vm5.sh"
+  end
+
+
 end
