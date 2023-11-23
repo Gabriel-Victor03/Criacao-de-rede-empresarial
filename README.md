@@ -19,4 +19,11 @@ Para cada serviço, será criado uma máquina virtual.
 1) Faça o clone do repositório do github para sua máquina.
    - Use o seguinte comando no diretório escolhido: `git clone https://github.com/Gabriel-Victor03/Criacao-de-rede-empresarial.git`
 2) Acesse o repositório clonado
+3) Dê o comando `vagrant up` para executar o arquivo Vagrantfile e subir as máquinas virtuais
+4) Após encerrado o processo de criação das máquinas virtuais, acesse as máquinas usando o comando `vagrant ssh <nome_da_máquina>`
+   - Nesse caso,para identificar cada máquina, use `vm1`, `vm2`,`vm3`,`vm4` e `vm5`
+> Lembrando que é possível acessar todas as máquinas ao mesmo tempo, para isso, abra uma nova aba do termninal no local do respositório e dê o comando de acesso.
+    
+## 📶 Teste dos serviços
+
 
