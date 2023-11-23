@@ -4,7 +4,8 @@ Esse repositório trata de documentar a projeção, criação, implantação e g
 Para cada serviço, será criado uma máquina virtual.
 ## Documentação
 ### Topologia da rede
-
+A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas virtuais estarão conectadas por meio de muitas interconexões e assim permitindo que todos os serviços das vms estejam interligados.
+<img src="topologia.png" alt="Topologia de rede">
 ### Segmentação de sub-redes
 
 ### Requisitos dos serviços
