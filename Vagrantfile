@@ -54,36 +54,39 @@
 Vagrant.configure("2") do |config|
   config.vm.define "vm1" do |dhcp|
       dhcp.vm.box = "ubuntu/focal64"  # Box (imagem base) a ser usada
-      dhcp.vm.hostname = "dhcp"
+      dhcp.vm.hostname = "servidor_dhcp"
       # vm1.vm.network "forwarded_port", guest: 80, host: 8080
       dhcp.vm.network "private_network", ip:"192.168.56.10"
-      dhcp.vm.provider "virtualbox" do |vb|  # Provedor de virtualização
-        vb.memory = "512"  # Quantidade de memória RAM
-        vb.cpus = 1  # Número de CPUs
-      end
+      
 
       dhcp.vm.provision "shell", path: "shell/vm1.sh" # Arquivo shell a ser lido e executado
   end
 
   config.vm.define "vm2" do |dns|
       dns.vm.box = "ubuntu/focal64"  # Box (imagem base) a ser usada
-      dns.vm.hostname = "dns"
+      dns.vm.hostname = "servidor_dns"
       dns.vm.network "private_network", type:"dhcp"
-      dns.vm.provider "virtualbox" do |vb|  # Provedor de virtualização
-        vb.memory = "512"  # Quantidade de memória RAM
-        vb.cpus = 1  # Número de CPUs
-      end
+      
 
       vm2.vm.provision "shell", path: "shell/vm2.sh" # Arquivo shell a ser lido e executado
   end
 
   config.vm.define "vm3" do |web|
-      web.vm.box = "ubuntu/focal64"
-      web.vm.hostname = "web"
-      web.vm.network "private_network", type: "dhcp"
-      web.vm.network "forwarded_port", guest: 80, host: 8080
-
-      web.vm.provision "shell", inline: <<-SHELL
+    web.vm.box = "ubuntu/focal64"
+    web.vm.hostname = "servidor_web"
+    web.vm.network "private_network", type: "dhcp"
+    web.vm.network "forwarded_port", guest: 80, host: 8080
+    web.vm.provider "virtualbox" do |vb|  # Provedor de virtualização
+      vb.memory = "512"  # Quantidade de memória RAM
+      vb.cpus = 1  # Número de CPUs
+    end
+    web.vm.provision "shell", path: "shell/vm3.sh"
   end
 
+  config.vm.define "vm4" do |ftp|
+    ftp.vm.box = "ubuntu/focal64"
+    ftp.vm.hostname = "servidor_ftp"
+    ftp.vm.network "private_network", type:"dhcp"
+    ftp.vm.provision "shell", path: "shell/vm4.sh"
+  end
 end
