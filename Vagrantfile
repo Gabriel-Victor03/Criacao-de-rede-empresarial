@@ -54,7 +54,7 @@
 Vagrant.configure("2") do |config|
   config.vm.define "vm1" do |vm1|
       vm1.vm.box = "ubuntu/focal64"  # Box (imagem base) a ser usada
-      vm1.vm.hostname = "Vm1"
+      vm1.vm.hostname = "dhcp"
       vm1.vm.network "forwarded_port", guest: 80, host: 8080
       vm1.vm.network "private_network", type: "dhcp"
       vm1.vm.provider "virtualbox" do |vb|  # Provedor de virtualização
@@ -62,6 +62,7 @@ Vagrant.configure("2") do |config|
         vb.cpus = 1  # Número de CPUs
       end
 
-      vm1.vm.provision "shell", path: "shell/vm.sh" # Arquivo shell a ser lido e executado
-    end
+      vm1.vm.provision "shell", path: "shell/vm1.sh" # Arquivo shell a ser lido e executado
+  end
+
 end
