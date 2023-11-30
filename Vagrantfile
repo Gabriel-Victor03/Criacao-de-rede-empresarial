@@ -77,4 +77,13 @@ Vagrant.configure("2") do |config|
       vm2.vm.provision "shell", path: "shell/vm2.sh" # Arquivo shell a ser lido e executado
   end
 
+  config.vm.define "vm3" do |web|
+      web.vm.box = "ubuntu/focal64"
+      web.vm.hostname = "web"
+      web.vm.network "private_network", type: "dhcp"
+      web.vm.network "forwarded_port", guest: 80, host: 8080
+
+      web.vm.provision "shell", inline: <<-SHELL
+  end
+
 end
