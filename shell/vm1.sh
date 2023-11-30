@@ -16,4 +16,6 @@ sudo docker pull networkboot/dhcpd
 #copia o arquivo pro tmp
 sudo cp /vagrant/dhcpd.config /tmp/dhcpd.config
 #cria container
-sudo docker run -d --name dhcp --network host -v /tmp:/data networkboot/dhcpd
+
+
+sudo docker run --detach --volume /usr/local/docker/dhcpd:/data --network host --name dhcpd --restart unless-stopped networkboot/dhcpd
