@@ -10,5 +10,8 @@ sudo systemctl enable docker
 sudo systemctl start docker
 #imagem do Apache
 sudo docker pull httpd
+
+#permissão a diretorio
+sudo chmod 777 /diretorioWEB
 # Executando o contêiner Apache 
-sudo docker run -d --name web -p 8080:80 httpd
+sudo docker run -d --name server_web -v/diretorioWEB/web1/:/usr/local/apache2/htdocs -p 8080:80 httpd
