@@ -42,9 +42,18 @@ A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas v
 2) Execute o comando de teste `sudo docker logs dhcp` e verifique os logs do container.
 
 ### Servidor DNS
+1) Acesse a máquina virtual pelo comando `vagrant ssh vm2`
+2) Execute o comando de teste `sudo systemctl status bind9`
 
 ### Serivdor Apache
+1) Acesse a máquina virtual pelo comando `vagrant ssh vm3`
+2) Abra o navegador nesta página: http://192.168.56.11 [http://192.168.56.13](http://192.168.50.13)
+3) Execute o comando de teste `sudo systemctl status apache2`
 
 ### Servidor FTP
+1) Acesse a máquina virtual pelo comando `vagrant ssh vm4`
+2) Execute o comando de teste `sudo docker logs ftp` e verifique os logs do container.
 
 ### Servidor NFS
+1) Acesse a máquina virtual pelo comando `vagrant ssh vm5`
+2) Execute o comando de teste `sudo systemctl status nfs-kernel-server`
