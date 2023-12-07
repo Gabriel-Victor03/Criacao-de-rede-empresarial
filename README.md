@@ -43,7 +43,7 @@ A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas v
 
 ### Servidor DNS
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm2`
-2) Execute o comando de teste `sudo systemctl status bind9`
+2) Execute o comando de teste `sudo docker logs bind9-container`
 
 ### Serivdor Apache
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm3`
