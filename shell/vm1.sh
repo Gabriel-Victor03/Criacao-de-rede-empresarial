@@ -18,4 +18,4 @@ sudo cp /vagrant/dhcpd.config /tmp/dhcpd.config
 #cria container
 
 
-sudo docker run --detach --volume /usr/local/docker/dhcpd:/data --network host --name dhcpd --restart unless-stopped networkboot/dhcpd
+sudo docker run --detach --volume /usr/local/docker/dhcpd:/data --network host --name dhcpd --restart unless-stopped networkboot/dhcpd enp2s0
