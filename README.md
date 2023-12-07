@@ -39,7 +39,7 @@ A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas v
 
 ### Servidor DHCP
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm1`
-2) Execute o comando de teste `sudo docker logs dhcp` e verifique os logs do container.
+2) Execute o comando de teste `sudo docker logs dhcpd` e verifique os logs do container.
 
 ### Servidor DNS
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm2`
