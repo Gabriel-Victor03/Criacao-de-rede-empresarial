@@ -57,4 +57,4 @@ A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas v
 
 ### Servidor NFS
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm5`
-2) Execute o comando de teste `sudo systemctl status nfs-kernel-server`
+2) Execute o comando de teste `sudo docker logs nfs-server`
