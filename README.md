@@ -52,7 +52,8 @@ A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas v
 
 ### Servidor FTP
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm4`
-2) Execute o comando de teste `sudo docker logs ftp` e verifique os logs do container.
+2) Execute o comando de teste `ftp <IP da Máquina>`.
+3) Informe o usuário e senha
 
 ### Servidor NFS
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm5`
