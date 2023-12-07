@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/gabriel_victor/Documentos/Criacao-de-rede-empresarial","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/diretorioWEB":{"guestpath":"/diretorioWEB","hostpath":"/home/adauto/Sistemas/4º periodo/Redes/Criacao-de-rede-empresarial/diretorio_synced","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/adauto/Sistemas/4º periodo/Redes/Criacao-de-rede-empresarial","disabled":false,"__vagrantfile":true}}}

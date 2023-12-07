@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant/nfs-share":{"guestpath":"/vagrant/nfs-share","hostpath":"/home/gabriel_victor/Documentos/Criacao-de-rede-empresarial/nfs-share","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/gabriel_victor/Documentos/Criacao-de-rede-empresarial","disabled":false,"__vagrantfile":true}}}
