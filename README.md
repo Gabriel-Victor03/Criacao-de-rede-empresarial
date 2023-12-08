@@ -47,8 +47,7 @@ A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas v
 
 ### Serivdor Apache
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm3`
-2) Abra o navegador nesta página:[http://192.168.56.13](http://192.168.50.13)
-3) Execute o comando de teste `sudo systemctl status apache2`
+2) Abra o navegador no IP va vm3 juntamente com a porta do container, no caso: [http://192.168.56.8:8080/](http://192.168.56.8:8080/) 
 
 ### Servidor FTP
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm4`
