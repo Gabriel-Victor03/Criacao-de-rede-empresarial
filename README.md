@@ -38,8 +38,9 @@ A topologia escolhida para esta rede foi a `em malha`, no qual todas máquinas v
 #### Para testar se os serviços de cada servidor esteja funcionando, siga os passos abaixo:
 
 ### Servidor DHCP
-1) Acesse a máquina virtual pelo comando `vagrant ssh vm1`
-2) Execute o comando de teste `sudo docker logs dhcpd` e verifique os logs do container.
+1) Acesse uma máquina virtual que não seja a do serviço DHCP `vagrant ssh vm2`
+2) Verifique sua interface de rede `ip link`
+3) Solicite um novo endereõ IP para o DHCP `sudo dhclient -v enp2s0`
 
 ### Servidor DNS
 1) Acesse a máquina virtual pelo comando `vagrant ssh vm2`
